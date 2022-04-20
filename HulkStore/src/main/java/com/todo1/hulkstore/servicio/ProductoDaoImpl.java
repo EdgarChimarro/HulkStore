@@ -6,6 +6,8 @@ package com.todo1.hulkstore.servicio;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.todo1.hulkstore.model.Producto;
@@ -50,8 +52,8 @@ public class ProductoDaoImpl implements IProductoDao{
     }
 
     @Override
-    public List<Producto> listarproductos() {
-	return repositorioProducto.findAll();
+    public Page<Producto> listarproductos(Pageable pageable) {
+	return repositorioProducto.findAll(pageable);
     }
 
 }

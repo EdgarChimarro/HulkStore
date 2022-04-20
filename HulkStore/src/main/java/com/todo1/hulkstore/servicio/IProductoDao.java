@@ -5,6 +5,9 @@ package com.todo1.hulkstore.servicio;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import com.todo1.hulkstore.model.Producto;
 
 /**
@@ -21,6 +24,6 @@ public interface IProductoDao {
     
     boolean eliminarProducto(Integer idproducto);
     
-    List<Producto> listarproductos();
+    Page<Producto> listarproductos(Pageable pageable);
     
 }
