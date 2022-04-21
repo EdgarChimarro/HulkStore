@@ -8,12 +8,12 @@ import org.thymeleaf.dialect.springdata.SpringDataDialect;
 @SpringBootApplication
 public class HulkStoreApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HulkStoreApplication.class, args);
-	}
+    public static void main(String[] args) {
+	SpringApplication.run(HulkStoreApplication.class, args);
+    }
 
-	@Bean
-	SpringDataDialect springDataDialect() {
-	  return new SpringDataDialect();  
-	} 
+    @Bean
+    SpringDataDialect springDataDialect() {
+	return new SpringDataDialect();
+    }
 }

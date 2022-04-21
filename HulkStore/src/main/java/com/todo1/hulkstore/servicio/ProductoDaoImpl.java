@@ -3,8 +3,6 @@
  */
 package com.todo1.hulkstore.servicio;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,24 +18,26 @@ import lombok.AllArgsConstructor;
  */
 @Service
 @AllArgsConstructor
-public class ProductoDaoImpl implements IProductoDao{
+public class ProductoDaoImpl implements IProductoDao {
 
     @Autowired
     private IRepositorioProducto repositorioProducto;
-    
+
     @Override
-    public Producto guardarProducto(Producto producto) {	 
+    public Producto guardarProducto(Producto producto) {
 	return repositorioProducto.save(producto);
     }
 
     @Override
-    public Producto obtenerProducto(Integer idProducto) {	
-	return repositorioProducto.findById(idProducto).orElseThrow(() -> {throw new RuntimeException();});
+    public Producto obtenerProducto(Integer idProducto) {
+	return repositorioProducto.findById(idProducto).orElseThrow(() -> {
+	    throw new RuntimeException();
+	});
     }
 
     @Override
-    public Producto modificarUsuario(Integer idProducto, Producto productoModificar) {	
-	return repositorioProducto.saveAndFlush(productoModificar);	
+    public Producto modificarUsuario(Integer idProducto, Producto productoModificar) {
+	return repositorioProducto.saveAndFlush(productoModificar);
     }
 
     @Override

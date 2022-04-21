@@ -13,6 +13,6 @@ import com.todo1.hulkstore.model.Producto;
  *
  */
 @Repository
-public interface IRepositorioProducto extends JpaRepository<Producto, Integer>{
+public interface IRepositorioProducto extends JpaRepository<Producto, Integer> {
 
 }

@@ -30,69 +30,69 @@ import lombok.Data;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id_Producto;        
-    private String nombre_Producto;
-    private String descripcion_Producto;
+    private Integer idProducto;        
+    private String nombreProducto;
+    private String descripcionProducto;
     
     @Column(nullable = false)
-    private float precio_Unitario;
-    private int cantidad_Producto;    
+    private float precioUnitario;
+    private int cantidadProducto;    
     
     @Column(nullable = false)
     @DateTimeFormat(iso = ISO.DATE)
-    private LocalDateTime fecha_Registro;
+    private LocalDateTime fechaRegistro;
 
     @PrePersist
     private void generarRegistro() {
-	this.fecha_Registro = LocalDateTime.now();
+	this.fechaRegistro = LocalDateTime.now();
     }
 
-    public Integer getId_Producto() {
-        return id_Producto;
+    public Integer getIdProducto() {
+        return idProducto;
     }
 
-    public void setId_Producto(Integer id_Producto) {
-        this.id_Producto = id_Producto;
+    public void setIdProducto(Integer id_Producto) {
+        this.idProducto = id_Producto;
     }
 
-    public String getNombre_Producto() {
-        return nombre_Producto;
+    public String getNombreProducto() {
+        return nombreProducto;
     }
 
-    public void setNombre_Producto(String nombre_Producto) {
-        this.nombre_Producto = nombre_Producto;
+    public void setNombreProducto(String nombre_Producto) {
+        this.nombreProducto = nombre_Producto;
     }
 
-    public String getDescripcion_Producto() {
-        return descripcion_Producto;
+    public String getDescripcionProducto() {
+        return descripcionProducto;
     }
 
-    public void setDescripcion_Producto(String descripcion_Producto) {
-        this.descripcion_Producto = descripcion_Producto;
+    public void setDescripcionProducto(String descripcion_Producto) {
+        this.descripcionProducto = descripcion_Producto;
     }
 
-    public float getPrecio_Unitario() {
-        return precio_Unitario;
+    public float getPrecioUnitario() {
+        return precioUnitario;
     }
 
-    public void setPrecio_Unitario(float precio_Unitario) {
-        this.precio_Unitario = precio_Unitario;
+    public void setPrecioUnitario(float precio_Unitario) {
+        this.precioUnitario = precio_Unitario;
     }
 
-    public int getCantidad_Producto() {
-        return cantidad_Producto;
+    public int getCantidadProducto() {
+        return cantidadProducto;
     }
 
-    public void setCantidad_Producto(int cantidad_Producto) {
-        this.cantidad_Producto = cantidad_Producto;
+    public void setCantidadProducto(int cantidad_Producto) {
+        this.cantidadProducto = cantidad_Producto;
     }
 
-    public LocalDateTime getFecha_Registro() {
-        return fecha_Registro;
+    public LocalDateTime getFechaRegistro() {
+        return fechaRegistro;
     }
 
-    public void setFecha_Registro(LocalDateTime fecha_Registro) {
-        this.fecha_Registro = fecha_Registro;
+    public void setFechaRegistro(LocalDateTime fecha_Registro) {
+        this.fechaRegistro = fecha_Registro;
     }
         
 }
